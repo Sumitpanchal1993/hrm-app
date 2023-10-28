@@ -1,0 +1,18 @@
+header{
+  position:sticky;
+  top:0;
+  background:#282A35;
+  color:white;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 0.6rem;
+  z-index:10;  
+}
+
+
+.headerLHS{
+  display:flex;
+  align-items: center;
+  gap: 10px;
+}

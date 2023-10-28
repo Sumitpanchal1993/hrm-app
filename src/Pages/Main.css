@@ -1,0 +1,8 @@
+.mainBase {
+  width: calc(100% - 15rem);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  left: 15rem;
+}

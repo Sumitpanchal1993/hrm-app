@@ -1,0 +1,52 @@
+.noticeBoard{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.one{
+  width:50rem;
+  height:34rem;
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  /* position:relative; */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: #310707;
+}
+
+.two{
+  /* position:absolute; */
+  width:96%;
+  height:95%;
+  border: 1px solid black;
+  border-radius: 1rem;
+  background:green;
+  padding:1rem;
+}
+.three h1{
+  text-align:center;
+}
+
+
+.page{
+  text-align:center;
+  margin-top:0.5rem;
+  width:8rem;
+  height:12rem;
+  background:white;
+  cursor:pointer;
+}
+
+.page:hover{
+  box-shadow: 0 0 15px 3px yellow;
+}
+
+.four{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:1rem;
+}

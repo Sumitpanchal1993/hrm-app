@@ -1,0 +1,40 @@
+.newemply{
+  /* border: 1px solid white; */
+  padding:1rem
+}
+
+.tag{
+  border: 2px solid orange;
+  padding:5px;
+  display:inline-block;
+  position:relative;
+  top:1.1rem;
+  left:2rem;
+  background: lightgrey;
+  opacity:1;
+  z-index: 1;
+  
+}
+.newemplyform label{
+  display:block;
+  font-weight: bold;
+}
+.newemplyform input[type=text]{
+  /* width: 100%; */
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  
+}
+
+.cover{
+  border:2px solid orange;
+  padding:1rem;
+  border-radius:1rem;
+  
+}
+

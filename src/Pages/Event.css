@@ -1,0 +1,10 @@
+.eventbase{
+  width:100%;
+  display:flex;   
+  align-items:center;
+  justify-content:space-evenly;
+  /* margin-left:5rem; */
+  gap:2rem;
+  flex-wrap:wrap;
+}
+
