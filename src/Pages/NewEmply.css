@@ -1,6 +1,7 @@
 .newemply{
   /* border: 1px solid white; */
-  padding:1rem
+  padding:1rem;
+  width: 100%;
 }
 
 .tag{

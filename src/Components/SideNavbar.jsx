@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './SideNavbar.css'
 import menuList from '../Static Data/SideNav_Menu'
 
@@ -39,10 +39,10 @@ export default function SideNavbar() {
           {menuList.map((item, index) => {
             return (
               <div className='menuopt' key={index} >
-                <Link to={item.link}>
+                <NavLink to={item.link}>
                   <span className="material-symbols-outlined">{item.icon}</span>
                   <p>{item.title}</p>
-                </Link>
+                </NavLink>
               </div>
             )
           })}
