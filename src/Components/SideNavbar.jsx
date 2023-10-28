@@ -1,16 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './SideNavbar.css'
-const menuList = [{ title: 'Home', icon: 'Home', link: '/' },
-{ title: 'Events', icon: 'Event', link: '/event' },
-{ title: 'Notice Board', icon: 'Campaign', link: '/info' },
-{ title: 'Login', icon: 'Login', link: '/login' },
-{ title: 'Add New Employee', icon: 'person_add', link: '/newemployeeregister' },
-{ title: 'Update Detail', icon: 'update', link: '/updatedetail' },
-{ title: 'Settings', icon: 'Settings', link: 'settings' },
-{ title: 'Feedback', icon: 'chat', link: 'feedback' },
-{ title: 'FAQ', icon: 'support_agent', link: 'faq' }]
-
+import menuList from '../Static Data/SideNav_Menu'
 
 const arrow = () => {
   // document.getElementById('arrow').innerHTML = 'arrow_back_ios'

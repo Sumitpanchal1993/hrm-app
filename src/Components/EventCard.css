@@ -4,7 +4,6 @@
   position:relative; 
   height:30rem;
   transition: all ease-in 0.5s;
-  /* border: 2px solid green; */
 }
 
 
@@ -29,6 +28,7 @@
 }
 .card_img img{
   width:25rem;
+  height: 15rem;
 }
 .detail{
   display:flex;
