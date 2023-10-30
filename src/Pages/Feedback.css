@@ -1,0 +1,45 @@
+.feedback_base{ 
+    /* border: 1px solid black; */
+    padding: 1rem;
+    width: 100%;
+}
+
+.feedback_base .title{
+    text-align: center;
+}
+
+
+hr{
+    margin: 1rem 0;
+}
+
+.feedback_base> form> div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback_base>form select, textarea{
+    border: none;
+    border-radius: 0.5rem;
+    width: calc(60%);
+    height: 2rem;
+    margin: 0.3rem;
+    padding: 0 1rem;
+}
+.feedback_base>form input[type='text']{
+    border: none;
+    border-radius: 0.5rem;
+    width: calc(60%);
+    height: 2rem;
+    margin: 0.3rem;
+    padding: 0 1rem;
+}
+
+.feedback_base >form textarea{
+    height: 10rem;
+    padding: 1rem;
+} 
+
+.feedback_base >form .feedback_submit{
+    justify-content: center;
+}
