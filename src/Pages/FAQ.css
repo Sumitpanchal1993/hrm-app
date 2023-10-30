@@ -1,0 +1,39 @@
+.FAQ_base {
+    width: 100%;
+    text-align: center;
+}
+
+
+.QA {
+    border: 1px solid grey;
+    padding: 0.6rem;
+    margin: 0.5rem 1rem;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+}
+
+.QA:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5)
+}
+
+.QA>h3 {
+    margin: 0.3rem;
+}
+
+.FAQ_base div>h1,
+div>h2 {
+    margin: 1rem;
+}
+
+.faq_srch {
+    margin: 1rem 0;
+}
+
+.faq_srch input {
+    border: none;
+    width: 20rem;
+    height: 2rem;
+    border-radius: 3rem;
+    padding: 0.2rem 1rem;
+}
