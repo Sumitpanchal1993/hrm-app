@@ -44,3 +44,25 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+For larger applications
+
+If your app has multiple domains of state (such as authentication, cart, settings, notifications), it's better to create separate contexts instead of one large global context:
+
+src/context/
+├── AuthContext.jsx
+├── ThemeContext.jsx
+├── CartContext.jsx
+└── NotificationContext.jsx
+
+Then compose the providers:
+
+<AuthProvider>
+  <ThemeProvider>
+    <CartProvider>
+      <App />
+    </CartProvider>
+  </ThemeProvider>
+</AuthProvider>
+
+This approach keeps state modular and reduces unnecessary re-renders.

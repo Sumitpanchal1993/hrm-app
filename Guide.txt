@@ -1,0 +1,83 @@
+For an HRM (Human Resource Management) application, it's better to organize contexts by business modules rather than generic UI state. A typical structure could look like this:
+
+src/
+├── context/
+│   ├── AuthContext.jsx           // Authentication, login/logout, token
+│   ├── UserContext.jsx           // Logged-in user profile & permissions
+│   ├── EmployeeContext.jsx       // Employee list, employee details
+│   ├── AttendanceContext.jsx     // Attendance, check-in/check-out
+│   ├── LeaveContext.jsx          // Leave balance & leave requests
+│   ├── PayrollContext.jsx        // Salary, payslips, payroll data
+│   ├── DepartmentContext.jsx     // Departments & designations
+│   ├── HolidayContext.jsx        // Company holidays
+│   ├── RecruitmentContext.jsx    // Jobs, candidates, interviews
+│   ├── PerformanceContext.jsx    // KPIs, appraisals
+│   ├── NotificationContext.jsx   // Toasts & notifications
+│   ├── ThemeContext.jsx          // Dark/light mode
+│   └── AppProvider.jsx           // Combines all providers
+├── hooks/
+│   ├── useAuth.js
+│   ├── useEmployee.js
+│   ├── useAttendance.js
+│   ├── useLeave.js
+│   └── ...
+Example AppProvider
+import { AuthProvider } from "./AuthContext";
+import { UserProvider } from "./UserContext";
+import { EmployeeProvider } from "./EmployeeContext";
+import { AttendanceProvider } from "./AttendanceContext";
+import { LeaveProvider } from "./LeaveContext";
+import { PayrollProvider } from "./PayrollContext";
+import { NotificationProvider } from "./NotificationContext";
+import { ThemeProvider } from "./ThemeContext";
+
+export const AppProvider = ({ children }) => (
+  <AuthProvider>
+    <UserProvider>
+      <ThemeProvider>
+        <NotificationProvider>
+          <EmployeeProvider>
+            <AttendanceProvider>
+              <LeaveProvider>
+                <PayrollProvider>
+                  {children}
+                </PayrollProvider>
+              </LeaveProvider>
+            </AttendanceProvider>
+          </EmployeeProvider>
+        </NotificationProvider>
+      </ThemeProvider>
+    </UserProvider>
+  </AuthProvider>
+);
+Recommended responsibilities
+Context	Stores
+AuthContext	JWT token, login, logout, refresh token, authentication status
+UserContext	Logged-in employee profile, role, permissions, company info
+EmployeeContext	Employee list, employee details, CRUD operations
+AttendanceContext	Today's attendance, monthly attendance, check-in/out status
+LeaveContext	Leave balance, leave requests, approval status
+PayrollContext	Salary, payslips, deductions, payroll history
+DepartmentContext	Departments, designations, reporting hierarchy
+HolidayContext	Holiday calendar, company events
+RecruitmentContext	Job openings, applicants, interview schedules
+PerformanceContext	Reviews, goals, appraisals
+NotificationContext	Toast messages, unread notifications
+ThemeContext	Light/dark mode, UI preferences
+If you're using Redux or React Query
+
+Use Context only for app-wide state that changes infrequently, such as:
+
+Authentication
+Logged-in user
+Theme
+Language
+Notifications
+
+For server-fetched data (employees, attendance, payroll, leaves, departments), prefer React Query (TanStack Query) or Redux Toolkit instead of Context. Those libraries handle caching, background refetching, loading states, and synchronization much more efficiently than Context for API-driven data.
+
+For a modern HRM application, a common combination is:
+
+Context → Authentication, theme, notifications, current user
+TanStack Query → Employees, attendance, payroll, leave, departments, recruitment, performance
+React Router → Navigation and protected routes

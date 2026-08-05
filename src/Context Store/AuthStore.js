@@ -3,8 +3,6 @@ const AppContext = createContext();
 
 export const AppProvider = ({children})=>{
 const [login, setLogin] = useState(false);
-const [user, setUser] = useState(null);
-const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
 
 function login_func() {
@@ -18,11 +16,7 @@ function login_func() {
   const sharedItems = {
     login,
     login_func,
-    login_func2,
-    user,
-    setUser,
-    isSideBarOpen,
-    setIsSideBarOpen
+    login_func2
   }
   
   return (

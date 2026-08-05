@@ -1,33 +1,33 @@
 import React, { useState } from "react";
-import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import SideNavbar from "./Components/SideNavbar";
 import Main from "./Pages/Main";
 import TopNav from "./Components/TopNav";
+import { useAppContext } from "./Context Store/store";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [login, setLogin] = useState(false);
-  let login_func = () => {
-    setLogin(true);
-  };
-
-  let login_func2 = () => {
-    setLogin(false);
-  };
+  const { login, login_func, login_func2, user, setUser, isSideBarOpen, setIsSideBarOpen } = useAppContext();
 
   return (
     <>
       <Router>
-        <TopNav loginStatus={login} func={login_func} func2={login_func2} />
-        <section>
-          <SideNavbar loginstatus={login} />
-        </section>
+        <header>
+          <TopNav loginStatus={login} func={login_func} func2={login_func2} />
+        </header>
         <main className="mainpg">
-          <Main loginStatus={login} />
+          <aside>
+            <SideNavbar loginStatus={login} />
+          </aside>
+          <section>
+            <Main loginStatus={login} />
+          </section>
         </main>
-        <footer>Footer</footer>
       </Router>
+      {/* <footer>
+        <p>&copy; 2026 My App. All rights reserved.</p>
+      </footer> */}
+
     </>
   );
 }

@@ -1,43 +1,24 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: roboto, sans-serif;
-    box-sizing:border-box;
-  }
-  
-  body{
-    background: lightgrey;
-  }
-  
-  button{
-    box-sizing:border-box;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: none;
-    border-radius:1rem;
-    margin:0.5rem 1rem;
-    background:orange;
-    padding:0.3rem 0.7rem;
-    font-size: 1rem;
-    font-weight:bold;
-  }
-  button:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset;
-    background:#a97619;
-    color: white;  
-  }
-  
-  .mainpg{
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .flex{
-    display:flex;
-    align-items:center;
-  }
+ button {
+   box-sizing: border-box;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   border: none;
+   border-radius: 1rem;
+   margin: 0.5rem 1rem;
+   background: orange;
+   padding: 0.3rem 0.7rem;
+   font-size: 1rem;
+   font-weight: bold;
+ }
 
-  .active{
+ button:hover {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset;
+   background: #a97619;
+   color: white;
+ }
+
+
+ .active {
    background: rgba(150, 140, 8, 0.5);
    border-radius: 1rem;
    padding: 0.3rem;
-  }
+ }
