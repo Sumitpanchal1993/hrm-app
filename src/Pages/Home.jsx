@@ -9,7 +9,7 @@ const [login, setLogin] = useState(false)
   return (
     <>
       <div className='homeBase'>
-        <div><img src={src}></img></div>
+        <div><img src={src} alt="image"></img></div>
         <h1>Welcome to the HRM Application</h1>
         <div>
           <h3>One Solution for all your Humam Resources Management Problems </h3>
