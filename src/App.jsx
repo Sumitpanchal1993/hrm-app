@@ -7,20 +7,19 @@ import { useAppContext } from "./Context Store/store";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const { login, login_func, login_func2, user, setUser, isSideBarOpen, setIsSideBarOpen } = useAppContext();
 
   return (
     <>
       <Router>
         <header>
-          <TopNav loginStatus={login} func={login_func} func2={login_func2} />
+          <TopNav />
         </header>
-        <main className="mainpg">
-          <aside>
-            <SideNavbar loginStatus={login} />
+        <main>
+          <aside className="side-navbar">
+            <SideNavbar />
           </aside>
           <section>
-            <Main loginStatus={login} />
+            <Main />
           </section>
         </main>
       </Router>

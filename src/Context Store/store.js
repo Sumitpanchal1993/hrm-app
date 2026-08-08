@@ -2,27 +2,32 @@ import { createContext , useState , useContext} from "react";
 const AppContext = createContext();
 
 export const AppProvider = ({children})=>{
-const [login, setLogin] = useState(false);
+const [isLoggedIn, setIsLoggedIn] = useState(false);
 const [user, setUser] = useState(null);
 const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-
-
-function login_func() {
-    setLogin(true);
+const [isMobile, setIsMobile] = useState(getdeviceType());
+const [isPopup, setIsPopup] = useState(false)
+function getdeviceType() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  if (userAgent.includes("mobile")) {
+    return true; // Mobile device
+  } else {
+    return false; // Desktop device
   }
+}
 
-  function login_func2() {
-    setLogin(false);
-  }
+
+
 
   const sharedItems = {
-    login,
-    login_func,
-    login_func2,
+    isLoggedIn,
+    setIsLoggedIn,
     user,
     setUser,
     isSideBarOpen,
-    setIsSideBarOpen
+    setIsSideBarOpen,
+    isMobile,
+    setIsMobile, isPopup, setIsPopup
   }
   
   return (

@@ -1,33 +1,33 @@
 import React from 'react'
 import './TopNav.css'
 import { Link } from 'react-router-dom'
+import { useAppContext } from '../Context Store/store'
+import PopupModal from './PopupModal';
+
 
 export default function TopNav(props) {
-
+  const { isMobile, isPopup, setIsPopup,  isLoggedIn } = useAppContext();
 
   return (
     <>
-      <header>
-        <div>
-          <h2>COMPANY LOGO</h2>
+      {isPopup && <PopupModal />}
+      <nav className='topNav'>
+        <div className='nav-logo'>
+          <h2>LOGO </h2>
         </div>
 
-        {!props.loginStatus ?
-          <Link to='/login'><button onClick={() => { props.func() }}>Login</button></Link> :
-          <div></div>
+        {!isLoggedIn ?
+          <Link to=""><button className='primaryButton' onClick={() => { setIsPopup(true) }}>Login</button></Link> : ""
         }
-
-        {props.loginStatus &&
-          <div className='headerLHS'>
+        { isLoggedIn &&
+          <div className='top-nav-user'>
             <span className="material-symbols-outlined"><span className="material-symbols-outlined">notifications</span></span>
-            <h3>Hi! UserName</h3>
+            <h3>Hi! User</h3>
             <span className="material-symbols-outlined">account_circle</span>
-            <Link to='/'><button onClick={() => { props.func2() }}>Log Out</button></Link>
-
+            <Link to='/'><button className='primaryButton' onClick={() => { props.func2() }}>Log Out</button></Link>
           </div>
         }
-
-      </header>
+      </nav>
     </>
   )
 }

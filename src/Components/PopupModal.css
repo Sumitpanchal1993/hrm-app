@@ -1,0 +1,86 @@
+.modal-base {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10001;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-card {
+    position: sticky;
+    /* min-width: 400px; */
+    /* min-height: max-content; */
+    /* aspect-ratio: 1.5; */
+    background: var(--surface);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-title {
+    width: 100%;
+    padding: 15px;
+    background: var(--appPurple);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-form div {
+    width: 100%;
+}
+
+.login-form input {
+    outline: none;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.login-form > .form-action{
+    text-align: right;
+}
+
+
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5px;
+}
+
+.modal-error{
+    color: red;
+    font-weight: bold;
+    visibility: hidden;
+
+}

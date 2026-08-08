@@ -1,14 +1,64 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap');
+
+:root{
+  --bg: #f4f6fb; /* soft background */
+  --surface: #eef2f8; /* subtle surface tint */
+  --primary: #0466c8; /* blue primary */
+  --text: #0f1724; /* dark text */
+  --muted: #6b7280; /* muted text */
+  --appGreen : #89C263; /* app green */
+  --appOrange: #EDA42D; /* app orange */
+  --appBlue: #2D89BE; /* app blue */
+  --appPurple: #5112AA; /* app purple */
+  --appMagenta: #AE5191; /* app magenta */
+}
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: lightgrey;
+  background: linear-gradient(135deg, var(--bg), var(--surface));
+  color: var(--text);
+}
+
+/* Utility refinements */
+::selection{
+  background: rgba(4,102,200,0.12);
+  color: var(--primary);
+}
+
+/* a{ color: var(--primary); text-decoration: none; }
+a:hover{ text-decoration: underline; } */
+
+button, input, textarea, select{
+  font-family: inherit;
+  color: var(--text);
+}
+
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+main{
+  background: yellow;
+  border: 1px solid blue;
+}
+
+aside{
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 900;
 }

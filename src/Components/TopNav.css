@@ -1,17 +1,15 @@
-header{
-  position:sticky;
-  top:0;
-  background:#282A35;
-  color:white;
-  display: flex;
-  align-items:center;
+.topNav{
+  display:flex;
   justify-content: space-between;
-  /* padding: 0.2rem; */
-  z-index:10;  
+  align-items: center;
+  background-color: var(--appPurple);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  /* max-height: 50px; */
 }
 
 
-.headerLHS{
+.top-nav-user{
   display:flex;
   align-items: center;
   gap: 10px;

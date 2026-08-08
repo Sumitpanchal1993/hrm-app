@@ -32,7 +32,7 @@ export default function SideNavbar() {
         />
       )}
       {/* Sidebar rendered after backdrop for higher z-index */}
-      <nav className={collapsed ? 'collapsed' : ''} style={{ zIndex: 102 }}>
+      <nav className={`left-nav ${collapsed ? 'collapsed' : ''}`} style={{ zIndex: 102 }}>
         <div id='logo' className={collapsed ? 'collapsed-logo' : ''}>
           {!collapsed && <Link to='/'>HRM APP</Link>}
         </div>
