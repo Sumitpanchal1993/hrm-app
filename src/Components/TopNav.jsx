@@ -13,7 +13,7 @@ export default function TopNav() {
       {isPopup && <PopupModal />}
       <nav className='topNav'>
         <div className='nav-logo'>
-          <h2>LOGO </h2>
+          <h2>APP LOGO</h2>
         </div>
 
         {!isLoggedIn ?

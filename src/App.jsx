@@ -18,7 +18,7 @@ function App() {
         <main>
           {isLoggedIn &&
             <aside className="side-navbar">
-              {/* <SideNavbar /> */}
+              <SideNavbar />
             </aside>
           }
           <section>
