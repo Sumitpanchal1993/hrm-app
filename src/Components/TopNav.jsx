@@ -5,8 +5,8 @@ import { useAppContext } from '../Context Store/store'
 import PopupModal from './PopupModal';
 
 
-export default function TopNav(props) {
-  const { isMobile, isPopup, setIsPopup,  isLoggedIn } = useAppContext();
+export default function TopNav() {
+  const { isMobile, isPopup, setIsPopup,  isLoggedIn, setIsLoggedIn } = useAppContext();
 
   return (
     <>
@@ -24,7 +24,7 @@ export default function TopNav(props) {
             <span className="material-symbols-outlined"><span className="material-symbols-outlined">notifications</span></span>
             <h3>Hi! User</h3>
             <span className="material-symbols-outlined">account_circle</span>
-            <Link to='/'><button className='primaryButton' onClick={() => { props.func2() }}>Log Out</button></Link>
+            <Link to='/'><button className='primaryButton' onClick={() => { setIsLoggedIn(false) }}>Log Out</button></Link>
           </div>
         }
       </nav>

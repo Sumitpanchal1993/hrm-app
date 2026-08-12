@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
 import SideNavbar from "./Components/SideNavbar";
-import Main from "./Pages/Main";
 import TopNav from "./Components/TopNav";
 import { useAppContext } from "./Context Store/store";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home"
 
 function App() {
+ const {isLoggedIn} = useAppContext()
 
   return (
     <>
@@ -15,11 +16,15 @@ function App() {
           <TopNav />
         </header>
         <main>
-          <aside className="side-navbar">
-            <SideNavbar />
-          </aside>
+          {isLoggedIn &&
+            <aside className="side-navbar">
+              {/* <SideNavbar /> */}
+            </aside>
+          }
           <section>
-            <Main />
+            <Routes>
+              <Route path="/" element={!isLoggedIn?<Home />:""} />
+            </Routes>
           </section>
         </main>
       </Router>
