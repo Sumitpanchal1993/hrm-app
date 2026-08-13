@@ -2,31 +2,69 @@ import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './SideNavbar.css'
 import menuList from '../Static Data/SideNav_Menu'
+import { useAppContext } from '../Context Store/store'
 
 export default function SideNavbar() {
+  const { isHRAdmin, isManager } = useAppContext()
+  const [activeItem, setActiveItem] = useState("")
 
+  const employeeDashboard = [
+    { title: 'Tasks', link: '/tasks' },
+    { title: 'Personal Info', link: '/personal-info' },
+    { title: 'Team', link: '/team' },
+    { title: 'Financial', link: '/financial' },
+    { title: 'Leaves Detail', link: '/leaves-detail' },
+    { title: 'Attendence', link: '/attendence' },
+  ]
+  const managerDashboard = [
+    { title: 'Approvals', link: '/approval' },
+    { title: 'Requests', link: '/request' },
+  ]
+
+  const hrDashboard = [
+    { title: 'Recruitments', link: '/recruitments' },
+    { title: 'Add Employee', link: '/add-employee' },
+    { title: 'Edit Employee', link: '/edit-employee' },
+    { title: 'PayRoll', link: '/payroll' },
+    { title: 'Create Team', link: '/create-team' },
+    { title: 'Attendence Log', link: '/attendence-log' },
+    { title: 'Recruitments', link: '/recruitments' },
+  ]
 
 
   return (
     <>
       <div className='side-menu-base'>
         <div>
-        <div className='side-menu-heading'>
-          <h3>Employee Dashboard</h3>
-        </div>
+          <div className='side-menu-heading'>
+            {isHRAdmin ? <h3>HR Admin Dashboard</h3> : <h3>Employee Dashboard</h3>}
+          </div>
           <div className='side-menu-subheading'>
             <p>Menu</p>
           </div>
           <hr />
-          <div className='side-menu-option'>
-            <p>Tasks</p>
-            <p>Personal Info</p>
-            <p>Organisational</p>
-            <p>Financial</p>
-            <p>Emergency Contact</p>
-            <p>Leaves Detail</p>
-            <p>Attendence</p>
-          </div>
+          {!isHRAdmin && <div className='side-menu-option' >
+            {employeeDashboard.map((item, index) => (
+              <Link to={item.link} key={index} className={activeItem === item.title ? "active-option" : ""} onClick={() => { setActiveItem(item.title) }}>
+                <p>{item.title}</p>
+              </Link>
+            ))}
+          </div>}
+          {isManager && <div className='side-menu-option' >
+            {managerDashboard.map((item, index) => (
+              <Link to={item.link} key={index} className={activeItem === item.title ? "active-option" : ""} onClick={() => { setActiveItem(item.title) }}>
+                <p>{item.title}</p>
+              </Link>
+            ))}
+          </div>}
+          {isHRAdmin && <div className='side-menu-option' >
+            {hrDashboard.map((item, index) => (
+              <Link to={item.link} key={index} className={activeItem === item.title ? "active-option" : ""} onClick={() => { setActiveItem(item.title) }}>
+                <p>{item.title}</p>
+              </Link>
+            ))}
+          </div>}
+
         </div>
 
         <div>
@@ -36,8 +74,12 @@ export default function SideNavbar() {
           </div>
           <hr />
           <div className='side-menu-option'>
-            <p>Setting</p>
-            <p>Help & FAQ</p>
+            <Link to="/setting" >
+              <p>Setting</p>
+            </Link>
+            <Link to="/faq" >
+              <p>Help & FAQ</p>
+            </Link>
           </div>
         </div>
       </div>

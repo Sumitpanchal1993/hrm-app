@@ -2,11 +2,15 @@ import { createContext , useState , useContext} from "react";
 const AppContext = createContext();
 
 export const AppProvider = ({children})=>{
-const [isLoggedIn, setIsLoggedIn] = useState(false);
+const [isLoggedIn, setIsLoggedIn] = useState(true);
 const [user, setUser] = useState(null);
 const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 const [isMobile, setIsMobile] = useState(getdeviceType());
 const [isPopup, setIsPopup] = useState(false)
+const [isManager, setIsManager] = useState(false)
+const [isHRAdmin, setIsHRAdmin] = useState(true)
+
+
 function getdeviceType() {
   const userAgent = navigator.userAgent.toLowerCase();
   if (userAgent.includes("mobile")) {
@@ -27,7 +31,7 @@ function getdeviceType() {
     isSideBarOpen,
     setIsSideBarOpen,
     isMobile,
-    setIsMobile, isPopup, setIsPopup
+    setIsMobile, isPopup, setIsPopup,isManager, isHRAdmin 
   }
   
   return (

@@ -23,7 +23,31 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 10px 0;
 }
 
+
+
+.side-menu-option a{
+  text-decoration: none;
+  color: black;
+  padding: 8px 10px;
+  width: 100%;  
+  border-radius: 5px;
+  margin: 5px 0;
+  transition: all 0.2s ease-in-out ;
+
+}
+.side-menu-option a:hover{
+  background-color: var(--appPurple);
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 0 5px var(--appPurple);
+  width: 100%;
+}
+
+
+.active-option{
+  background: var(--appPurple);
+  color: white !important;  
+  box-shadow: inset 0 0 5px var(--surface);
+}
