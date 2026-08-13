@@ -15,6 +15,7 @@ export default function SideNavbar() {
     { title: 'Financial', link: '/financial' },
     { title: 'Leaves Detail', link: '/leaves-detail' },
     { title: 'Attendence', link: '/attendence' },
+    { title: 'Events', link: '/Events' },
   ]
   const managerDashboard = [
     { title: 'Approvals', link: '/approval' },
@@ -28,7 +29,7 @@ export default function SideNavbar() {
     { title: 'PayRoll', link: '/payroll' },
     { title: 'Create Team', link: '/create-team' },
     { title: 'Attendence Log', link: '/attendence-log' },
-    { title: 'Recruitments', link: '/recruitments' },
+    { title: 'Events', link: '/events' },
   ]
 
 

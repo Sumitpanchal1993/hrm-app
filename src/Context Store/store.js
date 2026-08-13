@@ -8,7 +8,7 @@ const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 const [isMobile, setIsMobile] = useState(getdeviceType());
 const [isPopup, setIsPopup] = useState(false)
 const [isManager, setIsManager] = useState(false)
-const [isHRAdmin, setIsHRAdmin] = useState(true)
+const [isHRAdmin, setIsHRAdmin] = useState(false)
 
 
 function getdeviceType() {
