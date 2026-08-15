@@ -1,0 +1,10 @@
+.homeBase{
+    text-align: center;
+}
+
+.login-link{
+    font-weight: bolder;
+    font-style: italic;
+    color: red;
+    cursor: pointer;
+}

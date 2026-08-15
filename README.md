@@ -1,6 +1,10 @@
-# Getting Started with Create React App and Redux
+# HRM App - Human Resource Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+A comprehensive Human Resource Management (HRM) application designed to streamline HR operations and workforce management within the organization. This application provides tools for managing employees, events, feedback, notices, and other HR-related tasks.
+
+## Overview
+
+The HRM App Frontend is a modern React-based application built with Redux for state management, designed to handle various HR functions including employee management, event tracking, feedback collection, FAQs, and more.
 
 ## Available Scripts
 
@@ -39,30 +43,47 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Employee Management**: Add and manage new employees
+- **Event Tracking**: Create and manage organizational events
+- **Feedback System**: Collect employee feedback
+- **Notice Board**: Display important announcements and notices
+- **FAQ Section**: Frequently asked questions for HR guidance
+- **Authentication**: Secure login for authorized HR personnel
+- **Settings**: Configure application preferences
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-For larger applications
+```
+src/
+├── Components/          # Reusable UI components
+│   ├── EventCard.jsx
+│   ├── PopupModal.jsx
+│   ├── SideNavbar.jsx
+│   └── TopNav.jsx
+├── Pages/               # Page components
+│   ├── Home.jsx
+│   ├── Event.jsx
+│   ├── Feedback.jsx
+│   ├── FAQ.jsx
+│   ├── Login.jsx
+│   ├── NewEmply.jsx      # New Employee page
+│   ├── NoticeBoard.jsx
+│   └── Setting.jsx
+├── Context Store/       # Global state management
+│   ├── AuthStore.js
+│   └── store.js
+├── Utils/               # Utility functions
+│   └── EmployeeRoutes.js
+└── Static Data/         # Static data files
+```
 
-If your app has multiple domains of state (such as authentication, cart, settings, notifications), it's better to create separate contexts instead of one large global context:
+## Technology Stack
 
-src/context/
-├── AuthContext.jsx
-├── ThemeContext.jsx
-├── CartContext.jsx
-└── NotificationContext.jsx
+- **Frontend Framework**: React
+- **State Management**: Redux & Redux Toolkit
+- **Styling**: CSS
+- **Build Tool**: Create React App
 
-Then compose the providers:
-
-<AuthProvider>
-  <ThemeProvider>
-    <CartProvider>
-      <App />
-    </CartProvider>
-  </ThemeProvider>
-</AuthProvider>
-
-This approach keeps state modular and reduces unnecessary re-renders.
+## Getting Started
