@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link,  } from 'react-router-dom'
 import './SideNavbar.css'
-import menuList from '../Static Data/SideNav_Menu'
+// import menuList from '../Static Data/SideNav_Menu'
 import { useAppContext } from '../Context Store/store'
 
 export default function SideNavbar() {
@@ -15,7 +15,7 @@ export default function SideNavbar() {
     { title: 'Financial', link: '/financial' },
     { title: 'Leaves Detail', link: '/leaves-detail' },
     { title: 'Attendence', link: '/attendence' },
-    { title: 'Events', link: '/Events' },
+    { title: 'Events', link: '/event ' },
   ]
   const managerDashboard = [
     { title: 'Approvals', link: '/approval' },
@@ -29,7 +29,7 @@ export default function SideNavbar() {
     { title: 'PayRoll', link: '/payroll' },
     { title: 'Create Team', link: '/create-team' },
     { title: 'Attendence Log', link: '/attendence-log' },
-    { title: 'Events', link: '/events' },
+    { title: 'Events', link: '/event' },
   ]
 
 
