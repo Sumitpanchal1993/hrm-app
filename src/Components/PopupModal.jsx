@@ -5,7 +5,7 @@ import { useAppContext } from '../Context Store/store'
 
 
 function PopupModal() {
-  const { isPopup, setIsPopup, setIsLoggedIn } = useAppContext()
+  const { setIsPopup, setIsLoggedIn } = useAppContext()
   const [errorMsg, setErrorMsg] = useState("")
 
 

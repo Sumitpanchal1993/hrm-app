@@ -31,7 +31,7 @@ function getdeviceType() {
     isSideBarOpen,
     setIsSideBarOpen,
     isMobile,
-    setIsMobile, isPopup, setIsPopup,isManager, isHRAdmin 
+    setIsMobile, isPopup, setIsPopup,isManager, isHRAdmin , setIsManager, setIsHRAdmin
   }
   
   return (
