@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./App.css";
 import SideNavbar from "./Components/SideNavbar";
 import TopNav from "./Components/TopNav";
@@ -7,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home"
 import handleEmployeeRoutes from "./Utils/EmployeeRoutes";
 import FAQ from "./Pages/FAQ"
+import Setting from "./Pages/Setting"
 
 function App() {
  const {isLoggedIn} = useAppContext()
@@ -27,7 +27,7 @@ function App() {
             <Routes>
               <Route path="/" element={!isLoggedIn?<Home />:""} />
               {isLoggedIn && handleEmployeeRoutes()}  
-              <Route path="/setting" element={isLoggedIn?"Settings":""} />
+              <Route path="/setting" element={isLoggedIn?<Setting/>:""} />
               <Route path="/faq" element={isLoggedIn?<FAQ/>:""} />        
             </Routes>
           </section>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, } from 'react-router-dom'
 import './SideNavbar.css'
-import menuList from '../Static Data/SideNav_Menu'
 import { useAppContext } from '../Context Store/store'
 
 export default function SideNavbar() {
@@ -9,27 +8,27 @@ export default function SideNavbar() {
   const [activeItem, setActiveItem] = useState("")
 
   const employeeDashboard = [
-    { title: 'Tasks', link: '/tasks' },
-    { title: 'Personal Info', link: '/personal-info' },
-    { title: 'Team', link: '/team' },
-    { title: 'Financial', link: '/financial' },
-    { title: 'Leaves Detail', link: '/leaves-detail' },
-    { title: 'Attendence', link: '/attendence' },
-    { title: 'Events', link: '/Events' },
+    { title: 'Tasks', link: '/tasks' , icon: 'task' },
+    { title: 'Personal Info', link: '/personal-info' , icon: 'person' },
+    { title: 'Team', link: '/team' , icon: 'group' },
+    { title: 'Financial', link: '/financial' , icon: 'monetization_on' },
+    { title: 'Leaves Detail', link: '/leaves-detail' , icon: 'date_range' },
+    { title: 'Attendence', link: '/attendence' , icon: 'check_circle' },
+    { title: 'Events', link: '/event ' , icon: 'event' },
   ]
   const managerDashboard = [
-    { title: 'Approvals', link: '/approval' },
-    { title: 'Requests', link: '/request' },
+    { title: 'Approvals', link: '/approval' , icon: 'check_circle' },
+    { title: 'Requests', link: '/request' , icon: 'request_quote' },
   ]
 
   const hrDashboard = [
-    { title: 'Recruitments', link: '/recruitments' },
-    { title: 'Add Employee', link: '/add-employee' },
-    { title: 'Edit Employee', link: '/edit-employee' },
-    { title: 'PayRoll', link: '/payroll' },
-    { title: 'Create Team', link: '/create-team' },
-    { title: 'Attendence Log', link: '/attendence-log' },
-    { title: 'Events', link: '/events' },
+    { title: 'Recruitments', link: '/recruitments' , icon: 'work' },
+    { title: 'Add Employee', link: '/add-employee' , icon: 'person_add' },
+    { title: 'Edit Employee', link: '/edit-employee' , icon: 'edit' },
+    { title: 'PayRoll', link: '/payroll' , icon: 'payment' },
+    { title: 'Create Team', link: '/create-team' , icon: 'group_add' },
+    { title: 'Attendence Log', link: '/attendence-log' , icon: 'check_circle' },
+    { title: 'Events', link: '/event' , icon: 'event' },
   ]
 
 
@@ -47,6 +46,9 @@ export default function SideNavbar() {
           {!isHRAdmin && <div className='side-menu-option' >
             {employeeDashboard.map((item, index) => (
               <Link to={item.link} key={index} className={activeItem === item.title ? "active-option" : ""} onClick={() => { setActiveItem(item.title) }}>
+                  <span className="material-symbols-outlined">
+                  {item.icon}
+                </span>
                 <p>{item.title}</p>
               </Link>
             ))}
@@ -54,6 +56,9 @@ export default function SideNavbar() {
           {isManager && <div className='side-menu-option' >
             {managerDashboard.map((item, index) => (
               <Link to={item.link} key={index} className={activeItem === item.title ? "active-option" : ""} onClick={() => { setActiveItem(item.title) }}>
+                <span className="material-symbols-outlined">
+                  {item.icon}
+                </span>
                 <p>{item.title}</p>
               </Link>
             ))}
@@ -61,6 +66,9 @@ export default function SideNavbar() {
           {isHRAdmin && <div className='side-menu-option' >
             {hrDashboard.map((item, index) => (
               <Link to={item.link} key={index} className={activeItem === item.title ? "active-option" : ""} onClick={() => { setActiveItem(item.title) }}>
+                <span className="material-symbols-outlined">
+                  {item.icon}
+                </span>
                 <p>{item.title}</p>
               </Link>
             ))}
@@ -76,9 +84,15 @@ export default function SideNavbar() {
           <hr />
           <div className='side-menu-option'>
             <Link to="/setting" >
+              <span className="material-symbols-outlined">
+                settings
+              </span>
               <p>Setting</p>
             </Link>
             <Link to="/faq" >
+              <span className="material-symbols-outlined">
+                help
+              </span>
               <p>Help & FAQ</p>
             </Link>
           </div>
