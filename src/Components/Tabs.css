@@ -1,6 +1,5 @@
 .tabs {
   width: 100%;
-  margin: 50px auto;
   font-family: Arial, sans-serif;
 }
 
@@ -20,10 +19,15 @@
 }
 
 .tab-buttons button.active {
-  color: #2563eb;
-  /* border-bottom: 2px solid #2563eb; */
+  border-bottom: 2px solid var(--appOrange);  
+  background: var(--appPurple );
+  padding: 0.6rem 1.2rem;
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+  color: white;
+  border-radius: 10px 10px 0 0 ;
+
 }
 
 .tab-content {
-  padding: 25px;
+  /* padding: 25px; */
 }

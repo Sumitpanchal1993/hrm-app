@@ -46,7 +46,7 @@ export default function SideNavbar() {
           {!isHRAdmin && <div className='side-menu-option' >
             {employeeDashboard.map((item, index) => (
               <Link to={item.link} key={index} className={activeItem === item.title ? "active-option" : ""} onClick={() => { setActiveItem(item.title) }}>
-                  <span class="material-symbols-outlined">
+                  <span className="material-symbols-outlined">
                   {item.icon}
                 </span>
                 <p>{item.title}</p>
@@ -56,7 +56,7 @@ export default function SideNavbar() {
           {isManager && <div className='side-menu-option' >
             {managerDashboard.map((item, index) => (
               <Link to={item.link} key={index} className={activeItem === item.title ? "active-option" : ""} onClick={() => { setActiveItem(item.title) }}>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                   {item.icon}
                 </span>
                 <p>{item.title}</p>
@@ -66,7 +66,7 @@ export default function SideNavbar() {
           {isHRAdmin && <div className='side-menu-option' >
             {hrDashboard.map((item, index) => (
               <Link to={item.link} key={index} className={activeItem === item.title ? "active-option" : ""} onClick={() => { setActiveItem(item.title) }}>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                   {item.icon}
                 </span>
                 <p>{item.title}</p>
@@ -84,13 +84,13 @@ export default function SideNavbar() {
           <hr />
           <div className='side-menu-option'>
             <Link to="/setting" >
-              <span class="material-symbols-outlined">
+              <span className="material-symbols-outlined">
                 settings
               </span>
               <p>Setting</p>
             </Link>
             <Link to="/faq" >
-              <span class="material-symbols-outlined">
+              <span className="material-symbols-outlined">
                 help
               </span>
               <p>Help & FAQ</p>

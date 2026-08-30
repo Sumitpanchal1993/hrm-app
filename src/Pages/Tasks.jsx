@@ -15,7 +15,7 @@ function Tasks() {
                     <div className='task-card proposed-task'>
                         <div> <h4>Proposed Tasks </h4>
                             <p className='task-count'>10</p></div>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             assignment_add
                         </span>
 
@@ -24,22 +24,22 @@ function Tasks() {
                     <div className='task-card started-task'>
                         <h4>Started Tasks </h4>
                         <p className='task-count'>20</p>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             add_task
                         </span>
                     </div>
                     <div className='task-card pending-task'>
                         <h4>Pending Tasks </h4>
                         <p className='task-count'>30</p>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             pending_actions
                         </span>
                     </div>
                     <div className='task-card completed-task'>
                         <h4>Completed Tasks </h4>
                         <p className='task-count'>40</p>
-                        <span class="material-symbols-outlined">
-                            <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
+                            <span className="material-symbols-outlined">
                                 check_circle
                             </span>
                         </span>
