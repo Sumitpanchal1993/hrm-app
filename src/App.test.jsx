@@ -1,15 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
+import { render, screen } from '@testing-library/react';
 import App from './App';
+import { AppProvider } from './Context Store/store';
 
-test('renders learn react link', () => {
-  const { getByText } = render(
-    <Provider store={store}>
+test('renders the application navigation', () => {
+  render(
+    <AppProvider>
       <App />
-    </Provider>
+    </AppProvider>
   );
 
-  expect(getByText(/learn/i)).toBeInTheDocument();
+  expect(screen.getByText('APP LOGO')).toBeInTheDocument();
 });

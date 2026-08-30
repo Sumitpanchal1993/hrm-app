@@ -1,12 +1,41 @@
 .pInfoBase{
-    padding: 10px;
+    padding: 10px 15px;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .infoFields{
+    padding: 5px 10px;
     display: flex;
-    
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-width: 80%;
+    /* background-color: pink; */
+    gap: 1rem;
+}
+
+.oneField{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    gap: 5px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow:  0 0 5px white;
+
+}
+
+
+.infoAvtar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    background-color: lightgray;
+    border-radius: 50%;
+    box-shadow: 2px 0px 10px black;
 }
